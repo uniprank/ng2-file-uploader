@@ -1,4 +1,4 @@
-# Angular 2 File Upload
+# Angular 2 File Upload [![Build Status](https://travis-ci.org/uniprank/ng2-file-uploader.svg?branch=master)](https://travis-ci.org/uniprank/ng2-file-uploader)
 
 ---
 
