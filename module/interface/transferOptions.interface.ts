@@ -1,4 +1,3 @@
-import { FileManager } from '../source/fileManager.core';
 import { FileFilter } from '../source/fileFilter.core';
 
 export interface TransferOptions {
@@ -10,8 +9,6 @@ export interface TransferOptions {
     headers?: Object;
     // A list of filters which are extend the default list
     filters?: FileFilter[];
-    // A list of all files to be uploaded
-    files?: FileManager[];
     // A list of data to be sent along with the files
     formData?: Object[];
     // Automatically upload new files when they are adding to the queue

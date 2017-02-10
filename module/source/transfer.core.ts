@@ -15,7 +15,6 @@ const TransferOptionsDefault: TransferOptions = {
     alias: 'file',
     headers: {},
     filters: [],
-    files: [],
     formData: [],
     autoUpload: false,
     method: 'POST',
@@ -338,7 +337,7 @@ export abstract class Transfer {
     onBeforeUpload(_file: FileManager): void { return; }
     onProgress(_uploader: Transfer, _progress: any): void { return; }
     onProgressFile(_file: FileManager, _progress: number): void { return; }
-    onProgressFileSpeed(_uploader: FileManager, _progress: any): void { return; }
+    onProgressFileSpeed(_file: FileManager, _progress: any): void { return; }
     onSuccess(_file: FileManager, _response: any, _status: number, _headers: any): void { return; }
     onError(_file: FileManager, _response: any, _status: number, _headers: any): void { return; }
     onComplete(_file: FileManager, _response: any, _status: number, _headers: any): void { return; }
