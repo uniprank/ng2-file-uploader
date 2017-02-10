@@ -32,13 +32,13 @@ export class ExampleModule {
 ```
 
 ## Demos
-1. [Simple example](http://uniprank.github.io/pages/ng2-file-uploader/examples/)
-2. [Advanced example](http://uniprank.github.io/pages/ng2-file-uploader/examples/)
-3. [FileDrop Component example](http://uniprank.github.io/pages/ng2-file-uploader/examples/)
+1. [Simple example](http://uniprank.github.io/pages/ng2-file-uploader/examples/simple)
+2. [Advanced example](http://uniprank.github.io/pages/ng2-file-uploader/examples/advanced)
+3. [FileDrop Component example](http://uniprank.github.io/pages/ng2-file-uploader/examples/filedropexample)
 
 ## More Info
 
-1. [Introduction](https://github.com/uniprank/ng2-file-uploaderwiki/Introduction)
+1. [Introduction](https://github.com/uniprank/ng2-file-uploader/wiki/Introduction)
 2. [Module API](https://github.com/uniprank/ng2-file-uploader/wiki/Module-API)
 3. [FAQ](https://github.com/uniprank/ng2-file-uploaderwiki/FAQ)
 
