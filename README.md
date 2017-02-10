@@ -11,7 +11,7 @@ When files are selected or dropped into the component/directive, one or more fil
 ## Package managers
 ### NPM
 ```
-npm install @uniprank/ng2-file-uploader
+npm install @uniprank/ng2-file-uploader --save
 ```
 You could find this module in npm like [_angular2 file uploader_](https://www.npmjs.com/search?q=uniprank%20ng2-file-uploader).
 
