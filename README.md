@@ -13,7 +13,7 @@ When files are selected or dropped into the component/directive, one or more fil
 ```
 npm install @uniprank/ng2-file-uploader
 ```
-You could find this module in npm like [_angular2 file uploader_](https://www.npmjs.com/search?q=angular%20file%20upload).
+You could find this module in npm like [_angular2 file uploader_](https://www.npmjs.com/search?q=uniprank%20ng2-file-uploader).
 
 ### Module Dependency
 

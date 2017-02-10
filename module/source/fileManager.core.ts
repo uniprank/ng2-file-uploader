@@ -16,7 +16,7 @@ let {
 
 const FileManagerOptionsDefault: FileManagerOptions = {};
 
-class FileObject {
+export class FileObject {
     lastModifiedDate: Date;
     size: number;
     type: string;
