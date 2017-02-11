@@ -1,21 +1,38 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "commonjs",
     "moduleResolution": "node",
-    "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "removeComments": false,
-    "noImplicitAny": false,
-    "outDir": "./compiled"
+    "sourceMap": true,
+    "noEmitHelpers": false,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "declaration": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "stripInternal": true,
+    "noUnusedParameters": true,
+    "lib": ["es6", "dom"],
+    "rootDir": ".",
+    "types": [
+      "node"
+    ]
   },
+  "include": [
+    "module/**/*.ts"
+  ],
   "files": [
-    "typings/index.d.ts",
-    "./module/module.ts"
+    "index.ts",
+    "ng2-file-uploader.ts"
   ],
   "exclude": [
     "node_modules",
+    "bundles",
     "dist"
-  ]
+  ],
+  "angularCompilerOptions": {
+    "genDir": "aot",
+    "skipMetadataEmit" : false
+  }
 }

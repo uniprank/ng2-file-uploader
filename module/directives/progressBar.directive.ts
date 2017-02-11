@@ -1,5 +1,4 @@
-import { Directive, ElementRef, Input, Renderer, OnChanges, SimpleChanges } from '@angular/core';
-import { FileManager } from '../source/fileManager.core';
+import { Directive, ElementRef, Input, Renderer, OnChanges } from '@angular/core';
 import { FileSizePipe } from '../pipe/fileSizePipe.pipe';
 
 // tslint:disable:directive-selector
@@ -11,7 +10,7 @@ export class ProgressBarDirective implements OnChanges {
 
     constructor(private el: ElementRef, private renderer: Renderer) { }
 
-    ngOnChanges(changes: SimpleChanges) {
+    ngOnChanges() {
         let el = this.el;
         el.nativeElement.value = this.progress.percent;
         if (this.progress.speed > 0) {

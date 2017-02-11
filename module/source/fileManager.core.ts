@@ -1,24 +1,15 @@
-import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/Rx';
 import { Utils } from './utils.core';
 import { Transfer } from './transfer.core';
-import { Protocol } from './protocol.core';
-import { UploaderHook } from './uploaderHook.core';
 import { FileManagerOptions } from '../interface/fileManagerOptions.interface';
 
 // tslint:disable:no-unused-expression
 
-let {
-    File,
-    FormData,
-    FileReader
-} = (<any>window);
-
 const FileManagerOptionsDefault: FileManagerOptions = {};
 
 export class FileObject {
-    lastModifiedDate: Date;
-    size: number;
+    lastModifiedDate: Date | null;
+    size: number | null;
     type: string;
     name: string;
 
@@ -72,8 +63,6 @@ export class FileManager {
     private _isError: boolean;
     private _imageLoad: boolean;
     private _fileActive: boolean;
-
-    private _timerToken: any;
 
     /**
      * Creates an instance of FileManager.
@@ -146,11 +135,11 @@ export class FileManager {
         return this._file.type;
     }
 
-    public get date(): Date {
+    public get date(): Date | null {
         return this._file.lastModifiedDate;
     }
 
-    public get size(): number {
+    public get size(): number | null  {
         return this._file.size;
     }
 
@@ -299,22 +288,22 @@ export class FileManager {
      */
     onBeforeUpload(): void { return; }
 
-    onProgressSpeed(speed: any): void { return; }
+    onProgressSpeed(speed: any): void { speed = speed; }
 
     /**
      * Callback
      * @param {Number} progress
      * @private
      */
-    onProgress(progress: number): void { return; }
+    onProgress(progress: number): void { progress = progress; }
     /**
      * Callback
      * @param {any} response
      * @param {Number} status
      * @param {Object} headers
      */
-    onSuccess(response: any, status: number, headers: any): void { return; }
-    onError(response: any, status: number, headers: any): void { return; }
+    onSuccess(response: any, status: number, headers: any): void { response = response; status = status; headers = headers;  }
+    onError(response: any, status: number, headers: any): void { response = response; status = status; headers = headers;  }
 
     /**
      *  Internal functions

@@ -3,7 +3,6 @@
 import { Directive, EventEmitter, ElementRef, Renderer, HostListener, Output, Input, OnInit, OnDestroy } from '@angular/core';
 import { FileManager } from '../source/fileManager.core';
 import { Transfer } from '../source/transfer.core';
-import { Utils } from '../source/utils.core';
 import { FileManagerOptions } from '../interface';
 
 //

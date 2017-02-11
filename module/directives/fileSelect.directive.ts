@@ -1,9 +1,8 @@
 // tslint:disable:max-line-length
 // tslint:disable:no-unused-expression
-import { Directive, EventEmitter, ElementRef, Renderer, HostListener, HostBinding, Output, Input, OnInit, OnDestroy } from '@angular/core';
+import { Directive, EventEmitter, HostListener, HostBinding, Output, Input, OnInit, OnDestroy } from '@angular/core';
 import { FileManager } from '../source/fileManager.core';
 import { FileUploader } from '../source/fileUploader.core';
-import { Utils } from '../source/utils.core';
 import { FileManagerOptions } from '../interface';
 
 //
@@ -38,7 +37,7 @@ export class FileSelectDirective implements OnInit, OnDestroy {
     //
     // Constructor requires an element reference that instantiated this directive
     //
-    public constructor(private element: ElementRef, private renderer: Renderer) { }
+    public constructor() { }
 
     //
     // Initialisation

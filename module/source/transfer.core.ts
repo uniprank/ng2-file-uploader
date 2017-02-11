@@ -1,6 +1,4 @@
-import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/Rx';
-import { Response } from '@angular/http';
 import { Utils } from './utils.core';
 import { FileManager } from './fileManager.core';
 import { Protocol } from './protocol.core';
@@ -247,12 +245,12 @@ export abstract class Transfer {
 
     public addFilter (_filter: FileFilter): void {
         if (this.filterExists(_filter) !== -1) {
-            this.options.filters.push(_filter);
+            (<FileFilter[]>this.options.filters).push(_filter);
         }
     }
 
     public validate (_file: FileManager) {
-        for (let _filter of this.options.filters) {
+        for (let _filter of (<FileFilter[]>this.options.filters)) {
             if (!_filter.validate(_file)) {
                 throw new Error(`File [${_file.name}] doesn't fit with filter [${_filter.name}]`);
             }
@@ -386,7 +384,6 @@ export abstract class Transfer {
         this._onProgress();
      }
     _onProgress(): void {
-        let _progress = 0;
         let queue: FileManager[] = this._queue$.getValue();
         if (queue.length > 0) {
             let percent = 0;
@@ -434,7 +431,7 @@ export abstract class Transfer {
         };
     }
     _parseHeaders(headers: any): any {
-        let parsed = {}, key, val, i;
+        let parsed: any = {}, key, val, i;
 
         if (!headers) { return parsed; }
 
@@ -452,6 +449,7 @@ export abstract class Transfer {
         return parsed;
     }
     _transformResponse(response: any, headers: any): void {
+        headers = {};
         return response;
     }
 
@@ -468,18 +466,18 @@ export abstract class Transfer {
                         case hookType.errorAddingFile:
                         case hookType.completeUploadAll:
                         case hookType.progressUploadAll: {
-                            obj.callback(args[0]);
+                            (<Function>obj.callback)(args[0]);
                         }break;
 
                         case hookType.progressUploadFile: {
-                            obj.callback(args[0], args[1]);
+                            (<Function>obj.callback)(args[0], args[1]);
                         }break;
 
                         case hookType.cancelUploadFile:
                         case hookType.successUploadFile:
                         case hookType.failedUploadFile:
                         case hookType.completeUploadFile: {
-                            obj.callback(args[0], args[1], args[2], args[3]);
+                            (<Function>obj.callback)(args[0], args[1], args[2], args[3]);
                         }break;
 
                         default: {
@@ -515,7 +513,7 @@ export abstract class Transfer {
     }
 
     private filterExists (_filter: FileFilter): number {
-        let filters = this.options.filters;
+        let filters = <FileFilter[]>this.options.filters;
         for (let key in filters) {
             if ( filters.hasOwnProperty( key ) ) {
                 let obj = filters[key];

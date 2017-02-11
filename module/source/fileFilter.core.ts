@@ -8,10 +8,10 @@ export enum filterType {
 
 export class FileFilter {
     private _name: string = '';
-    private _regex: RegExp = null;
-    private _regCheck: string = null;
-    private _callback: Function = null;
-    private _type: filterType = null;
+    private _regex: RegExp | null = null;
+    private _regCheck: string | null = null;
+    private _callback: Function | null = null;
+    private _type: filterType | null = null;
 
     constructor (name: string, _data: RegExp | Function, _regCheck = 'name') {
         this._name = name;
@@ -32,7 +32,7 @@ export class FileFilter {
         return this._name;
     }
 
-    public get type(): filterType {
+    public get type(): filterType | null {
         return this._type;
     }
 
@@ -42,19 +42,19 @@ export class FileFilter {
             case filterType.regex: {
                 switch (this._regCheck) {
                     case 'name': {
-                        if (_file.object.name.match(this._regex)) {
+                        if (_file.object.name.match(<RegExp>this._regex)) {
                             _valid = true;
                         }
                     }break;
 
                     case 'type': {
-                        if (_file.object.type.match(this._regex)) {
+                        if (_file.object.type.match(<RegExp>this._regex)) {
                             _valid = true;
                         }
                     }break;
 
                     case 'size': {
-                        if ((<string><any>_file.object.size).match(this._regex)) {
+                        if ((<string><any>_file.object.size).match(<RegExp>this._regex)) {
                             _valid = true;
                         }
                     }break;
@@ -62,7 +62,7 @@ export class FileFilter {
                     case 'date': {
                         // Format for validation is `2017-01-01 10:10:10`
                         let _checkDate: string = new DatePipe('en-US').transform(_file.object.lastModifiedDate, 'yyyy-MM-dd hh:mm:ss');
-                        if (_checkDate.match(this._regex)) {
+                        if (_checkDate.match(<RegExp>this._regex)) {
                             _valid = true;
                         }
                     }break;
@@ -74,7 +74,7 @@ export class FileFilter {
             }break;
 
             case filterType.callback: {
-                _valid = this._callback(_file);
+                _valid = (<Function>this._callback)(_file);
             }break;
 
             default: {

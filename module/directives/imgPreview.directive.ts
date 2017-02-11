@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input, Renderer, OnChanges, SimpleChanges } from '@angular/core';
+import { Directive, ElementRef, Input, OnChanges } from '@angular/core';
 
 let {
     FileReader
@@ -10,16 +10,16 @@ export class ImagePreviewDirective implements OnChanges {
 
     @Input() image: any;
 
-    constructor(private el: ElementRef, private renderer: Renderer) { }
+    constructor(private el: ElementRef) { }
 
-    ngOnChanges(changes: SimpleChanges) {
+    ngOnChanges() {
         let reader = new FileReader();
         let el = this.el;
 
         // tslint:disable-next-line:max-line-length
         el.nativeElement.src = 'data:image/svg+xml;charset=utf-8,%3Csvg xmlns%3D\'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg\' viewBox%3D\'0 0 200 150\'%2F%3E';
 
-        reader.onloadend = function (e: FileReader) {
+        reader.onloadend = function () {
             el.nativeElement.src = reader.result;
         };
 
