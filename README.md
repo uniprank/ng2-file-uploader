@@ -31,6 +31,10 @@ export class ExampleModule {
 }
 ```
 
+<p align="center">
+  <img src="test-code/images/advanced-fileuploader.png" style="width:100%; height: auto;"/>
+</p>
+
 ## Demos
 1. [Simple example](http://uniprank.github.io/ng2-file-uploader/example/#simple)
 2. [Advanced example](http://uniprank.github.io/ng2-file-uploader/example/#advanced)

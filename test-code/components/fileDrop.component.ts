@@ -59,14 +59,6 @@ export class FileDropComponent implements OnInit {
         });
     }
 
-    public setPictures(event: any): void {
-        if (event.length > 0) {
-            this.imageLoaded = true;
-        }
-        this._files$.next(event);
-        this.checkClass();
-    }
-
     public get files(): any {
         let files = this._files$.getValue();
         return files;
@@ -85,6 +77,11 @@ export class FileDropComponent implements OnInit {
     }
 
     public onFileAccepted(event: any): void {
+        if (event.length > 0) {
+            this.imageLoaded = true;
+        }
+        this._files$.next(event);
+        this.checkClass();
         this.fileAccepted.emit(event);
     }
 
