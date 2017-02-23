@@ -33,6 +33,18 @@ const TransferOptionsDefault: TransferOptions = {
 export abstract class Transfer {
     public options: TransferOptions;
 
+    public get id (): any {
+        return this._id;
+    }
+
+    public get queue$ (): any {
+        return Utils.asObservable(this._queue$);
+    }
+
+    public get queueObs (): FileManager[] {
+        return this._queue$.getValue();
+    }
+
     private _id: string;
     private _queue$: BehaviorSubject<FileManager[]> = new BehaviorSubject( [] );
     private _hooks: UploaderHook[];
@@ -262,18 +274,6 @@ export abstract class Transfer {
             }
         }
         return true;
-    }
-
-    public get id (): any {
-        return this._id;
-    }
-
-    public get queue$ (): any {
-        return Utils.asObservable(this._queue$);
-    }
-
-    public get queueObs (): FileManager[] {
-        return this._queue$.getValue();
     }
 
     public _setProtocol (_protocol: Protocol) {

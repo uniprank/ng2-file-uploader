@@ -7,6 +7,14 @@ export enum filterType {
 }
 
 export class FileFilter {
+    public get name(): string {
+        return this._name;
+    }
+
+    public get type(): filterType | null {
+        return this._type;
+    }
+
     private _name: string = '';
     private _regex: RegExp | null = null;
     private _regCheck: string | null = null;
@@ -27,15 +35,6 @@ export class FileFilter {
         }
         throw new Error('FilterData is not defined.');
     }
-
-    public get name(): string {
-        return this._name;
-    }
-
-    public get type(): filterType | null {
-        return this._type;
-    }
-
     public validate(_file: FileManager): boolean {
         let _valid = false;
         switch (this._type) {

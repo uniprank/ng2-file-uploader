@@ -23,6 +23,19 @@ export abstract class Protocol {
     _error: EventEmitter<any>;
     _abort: EventEmitter<any>;
 
+    public set connection(obj: any) {
+        let {
+            _file,
+            _connection
+        } = obj;
+        if (!this.isConnected(_file)) {
+            this._connections.push({
+                id: _file.id,
+                connection: _connection
+            });
+        }
+    }
+
     private _id: string;
     private _connections: any[];
 
@@ -39,19 +52,6 @@ export abstract class Protocol {
         this._error = new EventEmitter<any>();
         this._abort = new EventEmitter<any>();
         this._connections = [];
-    }
-
-    public set connection(obj: any) {
-        let {
-            _file,
-            _connection
-        } = obj;
-        if (!this.isConnected(_file)) {
-            this._connections.push({
-                id: _file.id,
-                connection: _connection
-            });
-        }
     }
 
     /**
