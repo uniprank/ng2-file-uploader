@@ -107,6 +107,9 @@ export abstract class Transfer {
         if ( this.hookExists(_hook) === -1 ) {
             this._hooks.push(_hook);
             this._hooks.sort( (a, b) => {
+                if ( !(a.type) || !(b.type) ) {
+                    return 0;
+                }
                 if (a.type !== b.type) {
                     if (a.type < b.type) {
                         return -1;
@@ -116,6 +119,9 @@ export abstract class Transfer {
                     }
                     return 0;
                 } else {
+                    if ( !(a.priority) || !(b.priority) ) {
+                        return 0;
+                    }
                     if (a.priority > b.priority) {
                         return -1;
                     }
@@ -161,7 +167,7 @@ export abstract class Transfer {
                 _check = this.addFile(_dummyFile);
                 (_check) && _retFiles.push(_dummyFile);
             }
-        } else if (typeof _files === 'Object') {
+        } else if (_files instanceof Object) {
             // If _files is an array of FileManger
             if ( (typeof _files[0] !== 'undefined') && (_files[0] instanceof FileManager) ) {
                 for (let _file of _files) {
