@@ -23,6 +23,19 @@ export abstract class Protocol {
     _error: EventEmitter<any>;
     _abort: EventEmitter<any>;
 
+    public set connection(obj: any) {
+        let {
+            _file,
+            _connection
+        } = obj;
+        if (!this.isConnected(_file)) {
+            this._connections.push({
+                id: _file.id,
+                connection: _connection
+            });
+        }
+    }
+
     private _id: string;
     private _connections: any[];
 
@@ -39,19 +52,6 @@ export abstract class Protocol {
         this._error = new EventEmitter<any>();
         this._abort = new EventEmitter<any>();
         this._connections = [];
-    }
-
-    public set connection(obj: any) {
-        let {
-            _file,
-            _connection
-        } = obj;
-        if (!this.isConnected(_file)) {
-            this._connections.push({
-                id: _file.id,
-                connection: _connection
-            });
-        }
     }
 
     /**
@@ -126,7 +126,7 @@ export abstract class Protocol {
     }
 
     public removeConnection(_file: FileManager): void {
-        let _request = null;
+        let _request: any | null = null;
         for (let _key in this._connections) {
             if ( this._connections.hasOwnProperty( _key ) ) {
                 _request = this._connections[_key];
@@ -170,7 +170,7 @@ export class ProtocolXHR extends Protocol {
      */
     public run (_file: FileManager): void {
         let _xhr: XMLHttpRequest;
-        let sendable;
+        let sendable: any;
         let uploader: Transfer = _file.getUploader();
 
         let _formData = Utils.extendValue(uploader.options.formData, _file.options.formData);

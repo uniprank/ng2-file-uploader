@@ -7,6 +7,14 @@ import { FileManagerOptions } from '../interface/fileManagerOptions.interface';
 
 const FileManagerOptionsDefault: FileManagerOptions = {};
 
+const speedObject: any = {
+    total: 0,
+    loaded: 0,
+    percent: 0,
+    speed: 0,
+    speedToText: '0 bytes'
+};
+
 export class FileObject {
     lastModifiedDate: Date | null;
     size: number | null;
@@ -36,69 +44,9 @@ export class FileObject {
     }
 }
 
-const speedObject: any = {
-    total: 0,
-    loaded: 0,
-    percent: 0,
-    speed: 0,
-    speedToText: '0 bytes'
-};
-
 export class FileManager {
     public options: FileManagerOptions;
-
-    private _id: string;
-    private _protocol: any;
-    private _uploader: Transfer;
-    private _fileElement: any;
-    private _file: FileObject;
-    private _speedDefault: any;
-
-    private _progress$: BehaviorSubject<number> = new BehaviorSubject(0);
-    private _speed$: BehaviorSubject<any> = new BehaviorSubject(speedObject);
-    private _isUploading: boolean;
-    private _isUploaded: boolean;
-    private _isSuccess: boolean;
-    private _isCancel: boolean;
-    private _isError: boolean;
-    private _imageLoad: boolean;
-    private _fileActive: boolean;
-
-    /**
-     * Creates an instance of FileManager.
-     * 
-     * @param {*} _file
-     * @param {Transfer} [_uploader]
-     * @param {FileManagerOptions} [_options]
-     * 
-     * @memberOf FileManager
-     */
-    constructor (_file: any, _options?: FileManagerOptions, _uploader?: Transfer) {
-        this.options = Object.assign({}, FileManagerOptionsDefault, _options);
-        this._speedDefault = {
-
-        };
-
-        this._id = Utils.uniqueID();
-
-        this._isUploading = false;
-        this._isUploaded = false;
-        this._isSuccess = false;
-        this._isCancel = false;
-        this._isError = false;
-
-        let isInput = Utils.isElement(_file);
-        let file = isInput ? new FileObject(_file.files[0]) : new FileObject(_file);
-
-        this._file = file;
-        this._fileElement = isInput ? _file.files[0] : _file;
-        this._fileActive = false;
-
-        if (typeof _uploader !== 'undefined') {
-            this.bindUploader(_uploader);
-        }
-    }
-
+    
     public set protocol(_protocol: any) {
         this._protocol = _protocol;
     }
@@ -155,11 +103,63 @@ export class FileManager {
         return this._isError;
     }
 
+    private _id: string;
+    private _protocol: any;
+    private _uploader: Transfer;
+    private _fileElement: any;
+    private _file: FileObject;
+    private _speedDefault: any;
+
+    private _progress$: BehaviorSubject<number> = new BehaviorSubject(0);
+    private _speed$: BehaviorSubject<any> = new BehaviorSubject(speedObject);
+    private _isUploading: boolean;
+    private _isUploaded: boolean;
+    private _isSuccess: boolean;
+    private _isCancel: boolean;
+    private _isError: boolean;
+    private _imageLoad: boolean;
+    private _fileActive: boolean;
+
+    /**
+     * Creates an instance of FileManager.
+     * 
+     * @param {*} _file
+     * @param {Transfer} [_uploader]
+     * @param {FileManagerOptions} [_options]
+     * 
+     * @memberOf FileManager
+     */
+    constructor (_file: any, _options?: FileManagerOptions, _uploader?: Transfer) {
+        this.options = Object.assign({}, FileManagerOptionsDefault, _options);
+        this._speedDefault = {
+
+        };
+
+        this._id = Utils.uniqueID();
+
+        this._isUploading = false;
+        this._isUploaded = false;
+        this._isSuccess = false;
+        this._isCancel = false;
+        this._isError = false;
+
+        let isInput = Utils.isElement(_file);
+        let file = isInput ? new FileObject(_file.files[0]) : new FileObject(_file);
+
+        this._file = file;
+        this._fileElement = isInput ? _file.files[0] : _file;
+        this._fileActive = false;
+
+        if (typeof _uploader !== 'undefined') {
+            this.bindUploader(_uploader);
+        }
+    }
+
     /**
      * Bind uploader to FileManager
-     * 
+     *
      * @param {Transfer} _uploader
-     * 
+     *
      * @memberOf FileManager
      */
     public bindUploader (_uploader: Transfer): void {
@@ -173,9 +173,9 @@ export class FileManager {
 
     /**
      * Bind options to FileManager
-     * 
+     *
      * @param {FileManagerOptions} _options
-     * 
+     *
      * @memberOf FileManager
      */
     public bindOptions (_options: FileManagerOptions): void {
@@ -248,7 +248,7 @@ export class FileManager {
      * @memberOf FileManager
      */
     public remove (): void {
-        let _uploader;
+        let _uploader: any;
 
         try {
             _uploader = this.getUploader();

@@ -26,13 +26,13 @@ gulp.task('docs', () => {
       ignoreCompilerErrors: true,
       experimentalDecorators: true,
       emitDecoratorMetadata: true,
-      target: 'ES5',
+      target: 'ES6',
       moduleResolution: 'node',
       preserveConstEnums: true,
       stripInternal: true,
       suppressExcessPropertyErrors: true,
       suppressImplicitAnyIndexErrors: true,
-      module: 'commonjs',
+      module: 'es6',
       ignoreCompilerErrors: true,
       noLib: true
     }));
