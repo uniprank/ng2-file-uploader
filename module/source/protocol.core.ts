@@ -126,7 +126,7 @@ export abstract class Protocol {
     }
 
     public removeConnection(_file: FileManager): void {
-        let _request = null;
+        let _request: any | null = null;
         for (let _key in this._connections) {
             if ( this._connections.hasOwnProperty( _key ) ) {
                 _request = this._connections[_key];
@@ -170,7 +170,7 @@ export class ProtocolXHR extends Protocol {
      */
     public run (_file: FileManager): void {
         let _xhr: XMLHttpRequest;
-        let sendable;
+        let sendable: any;
         let uploader: Transfer = _file.getUploader();
 
         let _formData = Utils.extendValue(uploader.options.formData, _file.options.formData);

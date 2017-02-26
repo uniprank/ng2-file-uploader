@@ -1,6 +1,6 @@
 {
   "name": "@uniprank/ng2-file-uploader",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "homepage": "https://github.com/uniprank/ng2-file-uploader#readme",
   "author": "Dennis Fiedler <dennis.fiedler@uniprank.com>",
   "description": "An angular file uploader library",

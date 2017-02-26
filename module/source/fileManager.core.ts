@@ -248,7 +248,7 @@ export class FileManager {
      * @memberOf FileManager
      */
     public remove (): void {
-        let _uploader;
+        let _uploader: any;
 
         try {
             _uploader = this.getUploader();

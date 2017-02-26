@@ -437,7 +437,7 @@ export abstract class Transfer {
         };
     }
     _parseHeaders(headers: any): any {
-        let parsed: any = {}, key, val, i;
+        let parsed: any = {}, key: any, val: any, i: any;
 
         if (!headers) { return parsed; }
 
