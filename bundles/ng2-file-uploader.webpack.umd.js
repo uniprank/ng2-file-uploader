@@ -11,51 +11,34 @@
 return webpackJsonp([0,1],{
 
 /***/ "./index.ts":
-/* exports provided: hookType, UploaderHook, FileManager, FileFilter, FileUploader, Protocol, ProtocolXHR, Transfer, Utils, FileUploaderModule, UPLOAD_DIRECTIVES, UPLOAD_ALL, FileDropDirective, FileSelectDirective, ImagePreviewDirective, ProgressBarDirective, FileSizePipe */
+/* unknown exports provided */
 /* all exports used */
 /*!******************!*\
   !*** ./index.ts ***!
   \******************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__module__ = __webpack_require__(/*! ./module */ "./module/index.ts");
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "hookType", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["a"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UploaderHook", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["b"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "FileManager", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["c"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "FileFilter", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["d"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "FileUploader", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["e"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Protocol", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["f"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ProtocolXHR", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["g"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Transfer", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["h"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "Utils", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["i"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "FileUploaderModule", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["j"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UPLOAD_DIRECTIVES", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["k"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "UPLOAD_ALL", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["l"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "FileDropDirective", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["m"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "FileSelectDirective", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["n"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ImagePreviewDirective", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["o"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ProgressBarDirective", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["p"]; });
-/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "FileSizePipe", function() { return __WEBPACK_IMPORTED_MODULE_0__module__["q"]; });
 
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(/*! ./module */ "./module/index.ts"));
 
 
 /***/ }),
 
 /***/ "./module/directives/fileDrop.directive.ts":
-/* exports provided: FileDropDirective */
-/* exports used: FileDropDirective */
+/* unknown exports provided */
+/* all exports used */
 /*!*************************************************!*\
   !*** ./module/directives/fileDrop.directive.ts ***!
   \*************************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__source_fileManager_core__ = __webpack_require__(/*! ../source/fileManager.core */ "./module/source/fileManager.core.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__source_transfer_core__ = __webpack_require__(/*! ../source/transfer.core */ "./module/source/transfer.core.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FileDropDirective; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -65,11 +48,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 // tslint:disable:max-line-length
 // tslint:disable:no-unused-expression
-
-
-
+var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/index.js");
+var fileManager_core_1 = __webpack_require__(/*! ../source/fileManager.core */ "./module/source/fileManager.core.ts");
+var transfer_core_1 = __webpack_require__(/*! ../source/transfer.core */ "./module/source/transfer.core.ts");
 //
 // Directive to support dragging and dropping and element onto a div
 //
@@ -80,10 +64,10 @@ var FileDropDirective = (function () {
     function FileDropDirective(element, renderer) {
         this.element = element;
         this.renderer = renderer;
-        this.fileHoverStart = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */]();
-        this.fileHoverEnd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */]();
-        this.fileAccepted = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */]();
-        this.fileRejected = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */]();
+        this.fileHoverStart = new core_1.EventEmitter();
+        this.fileHoverEnd = new core_1.EventEmitter();
+        this.fileAccepted = new core_1.EventEmitter();
+        this.fileRejected = new core_1.EventEmitter();
         this._InputFile = null;
     }
     //
@@ -97,7 +81,7 @@ var FileDropDirective = (function () {
         if (this._files.length > 0) {
             for (var _i = 0, _a = this._files; _i < _a.length; _i++) {
                 var _file = _a[_i];
-                if (_file instanceof __WEBPACK_IMPORTED_MODULE_1__source_fileManager_core__["a" /* FileManager */]) {
+                if (_file instanceof fileManager_core_1.FileManager) {
                     if (!_file.isUploaded()) {
                         _file.cancel();
                         this.uploader.removeFile(_file);
@@ -185,7 +169,7 @@ var FileDropDirective = (function () {
         for (var i = 0; i < _files.length; i++) {
             var file = _files[i];
             try {
-                fmObject = new __WEBPACK_IMPORTED_MODULE_1__source_fileManager_core__["a" /* FileManager */](file, this.fileOptions, this.uploader);
+                fmObject = new fileManager_core_1.FileManager(file, this.fileOptions, this.uploader);
             }
             catch (e) {
                 if (e.status === 100) {
@@ -220,73 +204,70 @@ var FileDropDirective = (function () {
     return FileDropDirective;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Output */])(),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */])
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
 ], FileDropDirective.prototype, "fileHoverStart", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Output */])(),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */])
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
 ], FileDropDirective.prototype, "fileHoverEnd", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Output */])(),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */])
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
 ], FileDropDirective.prototype, "fileAccepted", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Output */])(),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */])
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
 ], FileDropDirective.prototype, "fileRejected", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* Input */])(),
+    core_1.Input(),
     __metadata("design:type", Object)
 ], FileDropDirective.prototype, "fileOptions", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* Input */])(),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__source_transfer_core__["a" /* Transfer */])
+    core_1.Input(),
+    __metadata("design:type", transfer_core_1.Transfer)
 ], FileDropDirective.prototype, "uploader", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* HostListener */])('dragover', ['$event']),
+    core_1.HostListener('dragover', ['$event']),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Event]),
     __metadata("design:returntype", void 0)
 ], FileDropDirective.prototype, "onDragOver", null);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* HostListener */])('dragleave', ['$event']),
+    core_1.HostListener('dragleave', ['$event']),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Event]),
     __metadata("design:returntype", void 0)
 ], FileDropDirective.prototype, "onDragLeave", null);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* HostListener */])('drop', ['$event']),
+    core_1.HostListener('drop', ['$event']),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Event]),
     __metadata("design:returntype", void 0)
 ], FileDropDirective.prototype, "onDrop", null);
 FileDropDirective = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* Directive */])({
+    core_1.Directive({
         // Selector required in component HTML
         // tslint:disable-next-line:directive-selector
         selector: '[ng2File2Drop]'
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* Renderer */]])
+    __metadata("design:paramtypes", [core_1.ElementRef, core_1.Renderer])
 ], FileDropDirective);
-
+exports.FileDropDirective = FileDropDirective;
 
 
 /***/ }),
 
 /***/ "./module/directives/fileSelect.directive.ts":
-/* exports provided: FileSelectDirective */
-/* exports used: FileSelectDirective */
+/* unknown exports provided */
+/* all exports used */
 /*!***************************************************!*\
   !*** ./module/directives/fileSelect.directive.ts ***!
   \***************************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__source_fileManager_core__ = __webpack_require__(/*! ../source/fileManager.core */ "./module/source/fileManager.core.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__source_fileUploader_core__ = __webpack_require__(/*! ../source/fileUploader.core */ "./module/source/fileUploader.core.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FileSelectDirective; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -296,11 +277,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 // tslint:disable:max-line-length
 // tslint:disable:no-unused-expression
-
-
-
+var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/index.js");
+var fileManager_core_1 = __webpack_require__(/*! ../source/fileManager.core */ "./module/source/fileManager.core.ts");
+var fileUploader_core_1 = __webpack_require__(/*! ../source/fileUploader.core */ "./module/source/fileUploader.core.ts");
 //
 // Directive to support select file from inputfield
 //
@@ -311,10 +293,10 @@ var FileSelectDirective = (function () {
     function FileSelectDirective() {
         this.role = 'input';
         this.type = 'file';
-        this.fileHoverStart = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */]();
-        this.fileHoverEnd = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */]();
-        this.fileAccepted = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */]();
-        this.fileRejected = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */]();
+        this.fileHoverStart = new core_1.EventEmitter();
+        this.fileHoverEnd = new core_1.EventEmitter();
+        this.fileAccepted = new core_1.EventEmitter();
+        this.fileRejected = new core_1.EventEmitter();
         this._InputFile = null;
     }
     //
@@ -327,7 +309,7 @@ var FileSelectDirective = (function () {
         if (this._files.length > 0) {
             for (var _i = 0, _a = this._files; _i < _a.length; _i++) {
                 var _file = _a[_i];
-                if (_file instanceof __WEBPACK_IMPORTED_MODULE_1__source_fileManager_core__["a" /* FileManager */]) {
+                if (_file instanceof fileManager_core_1.FileManager) {
                     if (!_file.isUploaded()) {
                         _file.cancel();
                         this.uploader.removeFile(_file);
@@ -367,7 +349,7 @@ var FileSelectDirective = (function () {
         for (var i = 0; i < _files.length; i++) {
             var file = _files[i];
             try {
-                fmObject = new __WEBPACK_IMPORTED_MODULE_1__source_fileManager_core__["a" /* FileManager */](file, this.fileOptions, this.uploader);
+                fmObject = new fileManager_core_1.FileManager(file, this.fileOptions, this.uploader);
             }
             catch (e) {
                 if (e.status === 100) {
@@ -390,67 +372,66 @@ var FileSelectDirective = (function () {
     return FileSelectDirective;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* HostBinding */])('attr.role'),
+    core_1.HostBinding('attr.role'),
     __metadata("design:type", Object)
 ], FileSelectDirective.prototype, "role", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* HostBinding */])('attr.type'),
+    core_1.HostBinding('attr.type'),
     __metadata("design:type", Object)
 ], FileSelectDirective.prototype, "type", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Output */])(),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */])
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
 ], FileSelectDirective.prototype, "fileHoverStart", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Output */])(),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */])
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
 ], FileSelectDirective.prototype, "fileHoverEnd", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Output */])(),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */])
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
 ], FileSelectDirective.prototype, "fileAccepted", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["y" /* Output */])(),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */])
+    core_1.Output(),
+    __metadata("design:type", core_1.EventEmitter)
 ], FileSelectDirective.prototype, "fileRejected", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* Input */])(),
+    core_1.Input(),
     __metadata("design:type", Object)
 ], FileSelectDirective.prototype, "fileOptions", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* Input */])(),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__source_fileUploader_core__["a" /* FileUploader */])
+    core_1.Input(),
+    __metadata("design:type", fileUploader_core_1.FileUploader)
 ], FileSelectDirective.prototype, "uploader", void 0);
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["z" /* HostListener */])('change', ['$event']),
+    core_1.HostListener('change', ['$event']),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Event]),
     __metadata("design:returntype", void 0)
 ], FileSelectDirective.prototype, "onChange", null);
 FileSelectDirective = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* Directive */])({
+    core_1.Directive({
         // Selector required in component HTML
         // tslint:disable-next-line:directive-selector
         selector: '[ng2File2Select]'
     }),
     __metadata("design:paramtypes", [])
 ], FileSelectDirective);
-
+exports.FileSelectDirective = FileSelectDirective;
 
 
 /***/ }),
 
 /***/ "./module/directives/imgPreview.directive.ts":
-/* exports provided: ImagePreviewDirective */
-/* exports used: ImagePreviewDirective */
+/* unknown exports provided */
+/* all exports used */
 /*!***************************************************!*\
   !*** ./module/directives/imgPreview.directive.ts ***!
   \***************************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/index.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ImagePreviewDirective; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -460,7 +441,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/index.js");
 var FileReader = window.FileReader;
 // tslint:disable-next-line:directive-selector
 var ImagePreviewDirective = (function () {
@@ -482,30 +464,28 @@ var ImagePreviewDirective = (function () {
     return ImagePreviewDirective;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* Input */])(),
+    core_1.Input(),
     __metadata("design:type", Object)
 ], ImagePreviewDirective.prototype, "image", void 0);
 ImagePreviewDirective = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* Directive */])({ selector: 'img[imgPreview]' }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* ElementRef */]])
+    core_1.Directive({ selector: 'img[imgPreview]' }),
+    __metadata("design:paramtypes", [core_1.ElementRef])
 ], ImagePreviewDirective);
-
+exports.ImagePreviewDirective = ImagePreviewDirective;
 
 
 /***/ }),
 
 /***/ "./module/directives/progressBar.directive.ts":
-/* exports provided: ProgressBarDirective */
-/* exports used: ProgressBarDirective */
+/* unknown exports provided */
+/* all exports used */
 /*!****************************************************!*\
   !*** ./module/directives/progressBar.directive.ts ***!
   \****************************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__pipe_fileSizePipe_pipe__ = __webpack_require__(/*! ../pipe/fileSizePipe.pipe */ "./module/pipe/fileSizePipe.pipe.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProgressBarDirective; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -515,8 +495,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/index.js");
+var fileSizePipe_pipe_1 = __webpack_require__(/*! ../pipe/fileSizePipe.pipe */ "./module/pipe/fileSizePipe.pipe.ts");
 // tslint:disable:directive-selector
 var ProgressBarDirective = (function () {
     function ProgressBarDirective(el, renderer) {
@@ -527,7 +508,7 @@ var ProgressBarDirective = (function () {
         var el = this.el;
         el.nativeElement.value = this.progress.percent;
         if (this.progress.speed > 0) {
-            var pipe = new __WEBPACK_IMPORTED_MODULE_1__pipe_fileSizePipe_pipe__["a" /* FileSizePipe */]();
+            var pipe = new fileSizePipe_pipe_1.FileSizePipe();
             this.renderer.setElementAttribute(this.el.nativeElement, 'speedText', pipe.transform(this.progress.loaded));
         }
         else {
@@ -537,152 +518,138 @@ var ProgressBarDirective = (function () {
     return ProgressBarDirective;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* Input */])(),
+    core_1.Input(),
     __metadata("design:type", Object)
 ], ProgressBarDirective.prototype, "progress", void 0);
 ProgressBarDirective = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["j" /* Directive */])({
+    core_1.Directive({
         selector: 'progress[progressBar]'
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["q" /* ElementRef */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["r" /* Renderer */]])
+    __metadata("design:paramtypes", [core_1.ElementRef, core_1.Renderer])
 ], ProgressBarDirective);
-
+exports.ProgressBarDirective = ProgressBarDirective;
 
 
 /***/ }),
 
 /***/ "./module/index.ts":
-/* exports provided: hookType, UploaderHook, FileManager, FileFilter, FileUploader, Protocol, ProtocolXHR, Transfer, Utils, FileUploaderModule, UPLOAD_DIRECTIVES, UPLOAD_ALL, FileDropDirective, FileSelectDirective, ImagePreviewDirective, ProgressBarDirective, FileSizePipe */
-/* exports used: hookType, UploaderHook, FileManager, FileFilter, FileUploader, Protocol, ProtocolXHR, Transfer, Utils, FileUploaderModule, UPLOAD_DIRECTIVES, UPLOAD_ALL, FileDropDirective, FileSelectDirective, ImagePreviewDirective, ProgressBarDirective, FileSizePipe */
+/* unknown exports provided */
+/* all exports used */
 /*!*************************!*\
   !*** ./module/index.ts ***!
   \*************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__directives_fileDrop_directive__ = __webpack_require__(/*! ./directives/fileDrop.directive */ "./module/directives/fileDrop.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_fileSelect_directive__ = __webpack_require__(/*! ./directives/fileSelect.directive */ "./module/directives/fileSelect.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_imgPreview_directive__ = __webpack_require__(/*! ./directives/imgPreview.directive */ "./module/directives/imgPreview.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_progressBar_directive__ = __webpack_require__(/*! ./directives/progressBar.directive */ "./module/directives/progressBar.directive.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_0__directives_fileDrop_directive__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_1__directives_fileSelect_directive__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_2__directives_imgPreview_directive__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "p", function() { return __WEBPACK_IMPORTED_MODULE_3__directives_progressBar_directive__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pipe_fileSizePipe_pipe__ = __webpack_require__(/*! ./pipe/fileSizePipe.pipe */ "./module/pipe/fileSizePipe.pipe.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "q", function() { return __WEBPACK_IMPORTED_MODULE_4__pipe_fileSizePipe_pipe__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__source__ = __webpack_require__(/*! ./source */ "./module/source/index.ts");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_5__source__["a"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_5__source__["b"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_5__source__["c"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_5__source__["d"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_5__source__["e"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_5__source__["f"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_5__source__["g"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_5__source__["h"]; });
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_5__source__["i"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__module__ = __webpack_require__(/*! ./module */ "./module/module.ts");
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_6__module__["a"]; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return UPLOAD_DIRECTIVES; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return UPLOAD_ALL; });
 
-
-
-
-
-
-
-
-
-
-
-var UPLOAD_DIRECTIVES = [
-    __WEBPACK_IMPORTED_MODULE_1__directives_fileSelect_directive__["a" /* FileSelectDirective */],
-    __WEBPACK_IMPORTED_MODULE_0__directives_fileDrop_directive__["a" /* FileDropDirective */]
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+var fileDrop_directive_1 = __webpack_require__(/*! ./directives/fileDrop.directive */ "./module/directives/fileDrop.directive.ts");
+var fileSelect_directive_1 = __webpack_require__(/*! ./directives/fileSelect.directive */ "./module/directives/fileSelect.directive.ts");
+var imgPreview_directive_1 = __webpack_require__(/*! ./directives/imgPreview.directive */ "./module/directives/imgPreview.directive.ts");
+var progressBar_directive_1 = __webpack_require__(/*! ./directives/progressBar.directive */ "./module/directives/progressBar.directive.ts");
+__export(__webpack_require__(/*! ./directives/fileDrop.directive */ "./module/directives/fileDrop.directive.ts"));
+__export(__webpack_require__(/*! ./directives/fileSelect.directive */ "./module/directives/fileSelect.directive.ts"));
+__export(__webpack_require__(/*! ./directives/imgPreview.directive */ "./module/directives/imgPreview.directive.ts"));
+__export(__webpack_require__(/*! ./directives/progressBar.directive */ "./module/directives/progressBar.directive.ts"));
+__export(__webpack_require__(/*! ./pipe/fileSizePipe.pipe */ "./module/pipe/fileSizePipe.pipe.ts"));
+var source_1 = __webpack_require__(/*! ./source */ "./module/source/index.ts");
+exports.hookType = source_1.hookType;
+exports.UploaderHook = source_1.UploaderHook;
+exports.FileManager = source_1.FileManager;
+exports.FileFilter = source_1.FileFilter;
+exports.FileUploader = source_1.FileUploader;
+exports.Protocol = source_1.Protocol;
+exports.ProtocolXHR = source_1.ProtocolXHR;
+exports.Transfer = source_1.Transfer;
+exports.Utils = source_1.Utils;
+var module_1 = __webpack_require__(/*! ./module */ "./module/module.ts");
+exports.FileUploaderModule = module_1.FileUploaderModule;
+exports.UPLOAD_DIRECTIVES = [
+    fileSelect_directive_1.FileSelectDirective,
+    fileDrop_directive_1.FileDropDirective
 ];
-var UPLOAD_ALL = [
-    __WEBPACK_IMPORTED_MODULE_1__directives_fileSelect_directive__["a" /* FileSelectDirective */],
-    __WEBPACK_IMPORTED_MODULE_0__directives_fileDrop_directive__["a" /* FileDropDirective */],
-    __WEBPACK_IMPORTED_MODULE_2__directives_imgPreview_directive__["a" /* ImagePreviewDirective */],
-    __WEBPACK_IMPORTED_MODULE_3__directives_progressBar_directive__["a" /* ProgressBarDirective */]
+exports.UPLOAD_ALL = [
+    fileSelect_directive_1.FileSelectDirective,
+    fileDrop_directive_1.FileDropDirective,
+    imgPreview_directive_1.ImagePreviewDirective,
+    progressBar_directive_1.ProgressBarDirective
 ];
 
 
 /***/ }),
 
 /***/ "./module/module.ts":
-/* exports provided: FileUploaderModule */
-/* exports used: FileUploaderModule */
+/* unknown exports provided */
+/* all exports used */
 /*!**************************!*\
   !*** ./module/module.ts ***!
   \**************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__directives_fileSelect_directive__ = __webpack_require__(/*! ./directives/fileSelect.directive */ "./module/directives/fileSelect.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__directives_fileDrop_directive__ = __webpack_require__(/*! ./directives/fileDrop.directive */ "./module/directives/fileDrop.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__directives_imgPreview_directive__ = __webpack_require__(/*! ./directives/imgPreview.directive */ "./module/directives/imgPreview.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__directives_progressBar_directive__ = __webpack_require__(/*! ./directives/progressBar.directive */ "./module/directives/progressBar.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pipe_fileSizePipe_pipe__ = __webpack_require__(/*! ./pipe/fileSizePipe.pipe */ "./module/pipe/fileSizePipe.pipe.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FileUploaderModule; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/index.js");
+var fileSelect_directive_1 = __webpack_require__(/*! ./directives/fileSelect.directive */ "./module/directives/fileSelect.directive.ts");
+var fileDrop_directive_1 = __webpack_require__(/*! ./directives/fileDrop.directive */ "./module/directives/fileDrop.directive.ts");
+var imgPreview_directive_1 = __webpack_require__(/*! ./directives/imgPreview.directive */ "./module/directives/imgPreview.directive.ts");
+var progressBar_directive_1 = __webpack_require__(/*! ./directives/progressBar.directive */ "./module/directives/progressBar.directive.ts");
+var fileSizePipe_pipe_1 = __webpack_require__(/*! ./pipe/fileSizePipe.pipe */ "./module/pipe/fileSizePipe.pipe.ts");
 var FileUploaderModule = (function () {
     function FileUploaderModule() {
     }
     return FileUploaderModule;
 }());
 FileUploaderModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+    core_1.NgModule({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_1__directives_fileSelect_directive__["a" /* FileSelectDirective */],
-            __WEBPACK_IMPORTED_MODULE_2__directives_fileDrop_directive__["a" /* FileDropDirective */],
-            __WEBPACK_IMPORTED_MODULE_3__directives_imgPreview_directive__["a" /* ImagePreviewDirective */],
-            __WEBPACK_IMPORTED_MODULE_4__directives_progressBar_directive__["a" /* ProgressBarDirective */],
-            __WEBPACK_IMPORTED_MODULE_5__pipe_fileSizePipe_pipe__["a" /* FileSizePipe */]
+            fileSelect_directive_1.FileSelectDirective,
+            fileDrop_directive_1.FileDropDirective,
+            imgPreview_directive_1.ImagePreviewDirective,
+            progressBar_directive_1.ProgressBarDirective,
+            fileSizePipe_pipe_1.FileSizePipe
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_1__directives_fileSelect_directive__["a" /* FileSelectDirective */],
-            __WEBPACK_IMPORTED_MODULE_2__directives_fileDrop_directive__["a" /* FileDropDirective */],
-            __WEBPACK_IMPORTED_MODULE_3__directives_imgPreview_directive__["a" /* ImagePreviewDirective */],
-            __WEBPACK_IMPORTED_MODULE_4__directives_progressBar_directive__["a" /* ProgressBarDirective */],
-            __WEBPACK_IMPORTED_MODULE_5__pipe_fileSizePipe_pipe__["a" /* FileSizePipe */]
+            fileSelect_directive_1.FileSelectDirective,
+            fileDrop_directive_1.FileDropDirective,
+            imgPreview_directive_1.ImagePreviewDirective,
+            progressBar_directive_1.ProgressBarDirective,
+            fileSizePipe_pipe_1.FileSizePipe
         ]
     })
 ], FileUploaderModule);
-
+exports.FileUploaderModule = FileUploaderModule;
 
 
 /***/ }),
 
 /***/ "./module/pipe/fileSizePipe.pipe.ts":
-/* exports provided: FileSizePipe */
-/* exports used: FileSizePipe */
+/* unknown exports provided */
+/* all exports used */
 /*!******************************************!*\
   !*** ./module/pipe/fileSizePipe.pipe.ts ***!
   \******************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/index.js");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FileSizePipe; });
+
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/index.js");
 /*
  * Convert bytes into largest possible unit.
  * Takes an precision argument that defaults to 2.
@@ -719,31 +686,30 @@ var FileSizePipe = (function () {
     return FileSizePipe;
 }());
 FileSizePipe = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Pipe */])({ name: 'fileSize' })
+    core_1.Pipe({ name: 'fileSize' })
 ], FileSizePipe);
-
+exports.FileSizePipe = FileSizePipe;
 
 
 /***/ }),
 
 /***/ "./module/source/fileFilter.core.ts":
-/* exports provided: filterType, FileFilter */
-/* exports used: FileFilter */
+/* unknown exports provided */
+/* all exports used */
 /*!******************************************!*\
   !*** ./module/source/fileFilter.core.ts ***!
   \******************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common__ = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/index.js");
-/* unused harmony export filterType */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FileFilter; });
 
+Object.defineProperty(exports, "__esModule", { value: true });
+var common_1 = __webpack_require__(/*! @angular/common */ "./node_modules/@angular/common/index.js");
 var filterType;
 (function (filterType) {
     filterType[filterType["regex"] = 0] = "regex";
     filterType[filterType["callback"] = 1] = "callback";
-})(filterType || (filterType = {}));
+})(filterType = exports.filterType || (exports.filterType = {}));
 var FileFilter = (function () {
     function FileFilter(name, _data, _regCheck) {
         if (_regCheck === void 0) { _regCheck = 'name'; }
@@ -810,7 +776,7 @@ var FileFilter = (function () {
                         case 'date':
                             {
                                 // Format for validation is `2017-01-01 10:10:10`
-                                var _checkDate = new __WEBPACK_IMPORTED_MODULE_0__angular_common__["a" /* DatePipe */]('en-US').transform(_file.object.lastModifiedDate, 'yyyy-MM-dd hh:mm:ss');
+                                var _checkDate = new common_1.DatePipe('en-US').transform(_file.object.lastModifiedDate, 'yyyy-MM-dd hh:mm:ss');
                                 if (_checkDate.match(this._regex)) {
                                     _valid = true;
                                 }
@@ -835,29 +801,25 @@ var FileFilter = (function () {
     };
     return FileFilter;
 }());
-
+exports.FileFilter = FileFilter;
 
 
 /***/ }),
 
 /***/ "./module/source/fileManager.core.ts":
-/* exports provided: FileObject, FileManager */
-/* exports used: FileManager */
+/* unknown exports provided */
+/* all exports used */
 /*!*******************************************!*\
   !*** ./module/source/fileManager.core.ts ***!
   \*******************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(/*! rxjs/Rx */ "./node_modules/rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_core__ = __webpack_require__(/*! ./utils.core */ "./module/source/utils.core.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__transfer_core__ = __webpack_require__(/*! ./transfer.core */ "./module/source/transfer.core.ts");
-/* unused harmony export FileObject */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FileManager; });
 
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var Rx_1 = __webpack_require__(/*! rxjs/Rx */ "./node_modules/rxjs/Rx.js");
+var utils_core_1 = __webpack_require__(/*! ./utils.core */ "./module/source/utils.core.ts");
+var transfer_core_1 = __webpack_require__(/*! ./transfer.core */ "./module/source/transfer.core.ts");
 // tslint:disable:no-unused-expression
 var FileManagerOptionsDefault = {};
 var speedObject = {
@@ -870,9 +832,9 @@ var speedObject = {
 var FileObject = (function () {
     function FileObject(fileOrInput) {
         var _this = this;
-        var isInput = __WEBPACK_IMPORTED_MODULE_1__utils_core__["a" /* Utils */].isElement(fileOrInput);
+        var isInput = utils_core_1.Utils.isElement(fileOrInput);
         var fakePathOrObject = isInput ? fileOrInput.value : fileOrInput;
-        var isFakePath = __WEBPACK_IMPORTED_MODULE_1__utils_core__["a" /* Utils */].isString(fakePathOrObject) ? true : false;
+        var isFakePath = utils_core_1.Utils.isString(fakePathOrObject) ? true : false;
         var method = function (v, x) { if (v) {
             _this._createFromFakePath(x);
         }
@@ -895,7 +857,7 @@ var FileObject = (function () {
     };
     return FileObject;
 }());
-
+exports.FileObject = FileObject;
 var FileManager = (function () {
     /**
      * Creates an instance of FileManager.
@@ -907,17 +869,17 @@ var FileManager = (function () {
      * @memberOf FileManager
      */
     function FileManager(_file, _options, _uploader) {
-        this._progress$ = new __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__["BehaviorSubject"](0);
-        this._speed$ = new __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__["BehaviorSubject"](speedObject);
+        this._progress$ = new Rx_1.BehaviorSubject(0);
+        this._speed$ = new Rx_1.BehaviorSubject(speedObject);
         this.options = Object.assign({}, FileManagerOptionsDefault, _options);
         this._speedDefault = {};
-        this._id = __WEBPACK_IMPORTED_MODULE_1__utils_core__["a" /* Utils */].uniqueID();
+        this._id = utils_core_1.Utils.uniqueID();
         this._isUploading = false;
         this._isUploaded = false;
         this._isSuccess = false;
         this._isCancel = false;
         this._isError = false;
-        var isInput = __WEBPACK_IMPORTED_MODULE_1__utils_core__["a" /* Utils */].isElement(_file);
+        var isInput = utils_core_1.Utils.isElement(_file);
         var file = isInput ? new FileObject(_file.files[0]) : new FileObject(_file);
         this._file = file;
         this._fileElement = isInput ? _file.files[0] : _file;
@@ -942,14 +904,14 @@ var FileManager = (function () {
     });
     Object.defineProperty(FileManager.prototype, "progressPercent$", {
         get: function () {
-            return __WEBPACK_IMPORTED_MODULE_1__utils_core__["a" /* Utils */].asObservable(this._progress$);
+            return utils_core_1.Utils.asObservable(this._progress$);
         },
         enumerable: true,
         configurable: true
     });
     Object.defineProperty(FileManager.prototype, "progress$", {
         get: function () {
-            return __WEBPACK_IMPORTED_MODULE_1__utils_core__["a" /* Utils */].asObservable(this._speed$);
+            return utils_core_1.Utils.asObservable(this._speed$);
         },
         enumerable: true,
         configurable: true
@@ -1032,7 +994,7 @@ var FileManager = (function () {
      * @memberOf FileManager
      */
     FileManager.prototype.bindUploader = function (_uploader) {
-        if (this._uploader instanceof __WEBPACK_IMPORTED_MODULE_2__transfer_core__["a" /* Transfer */]) {
+        if (this._uploader instanceof transfer_core_1.Transfer) {
             this._uploader.removeFile(this);
         }
         this._uploader = _uploader;
@@ -1057,7 +1019,7 @@ var FileManager = (function () {
      * @memberOf FileManager
      */
     FileManager.prototype.getUploader = function () {
-        if (this._uploader instanceof __WEBPACK_IMPORTED_MODULE_2__transfer_core__["a" /* Transfer */]) {
+        if (this._uploader instanceof transfer_core_1.Transfer) {
             return this._uploader;
         }
         throw new Error('Not uploader for this file defined.');
@@ -1198,24 +1160,21 @@ var FileManager = (function () {
     };
     return FileManager;
 }());
-
+exports.FileManager = FileManager;
 
 
 /***/ }),
 
 /***/ "./module/source/fileUploader.core.ts":
-/* exports provided: FileUploader */
-/* exports used: FileUploader */
+/* unknown exports provided */
+/* all exports used */
 /*!********************************************!*\
   !*** ./module/source/fileUploader.core.ts ***!
   \********************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__protocol_core__ = __webpack_require__(/*! ./protocol.core */ "./module/source/protocol.core.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__transfer_core__ = __webpack_require__(/*! ./transfer.core */ "./module/source/transfer.core.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fileManager_core__ = __webpack_require__(/*! ./fileManager.core */ "./module/source/fileManager.core.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FileUploader; });
+
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1226,26 +1185,27 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var protocol_core_1 = __webpack_require__(/*! ./protocol.core */ "./module/source/protocol.core.ts");
+var transfer_core_1 = __webpack_require__(/*! ./transfer.core */ "./module/source/transfer.core.ts");
+var fileManager_core_1 = __webpack_require__(/*! ./fileManager.core */ "./module/source/fileManager.core.ts");
 // tslint:disable:max-line-length
 var FileUploader = (function (_super) {
     __extends(FileUploader, _super);
     function FileUploader(_options, _protocol) {
         var _this = _super.call(this, 'FileUploader', _options) || this;
         if (typeof _protocol === 'undefined') {
-            _this._setProtocol(new __WEBPACK_IMPORTED_MODULE_0__protocol_core__["b" /* ProtocolXHR */]());
+            _this._setProtocol(new protocol_core_1.ProtocolXHR());
             _this._getProtocol()._progress.subscribe(function (obj) {
                 var _file = obj._file, _data = obj._data;
-                if (_file instanceof __WEBPACK_IMPORTED_MODULE_2__fileManager_core__["a" /* FileManager */]) {
+                if (_file instanceof fileManager_core_1.FileManager) {
                     _this._onProgressFile(_file, _data.percent);
                     _this._onProgressFileSpeed(_file, _data);
                 }
             });
             _this._getProtocol()._load.subscribe(function (obj) {
                 var _file = obj._file, response = obj.response, status = obj.status, headers = obj.headers;
-                if (_file instanceof __WEBPACK_IMPORTED_MODULE_2__fileManager_core__["a" /* FileManager */]) {
+                if (_file instanceof fileManager_core_1.FileManager) {
                     var uploader_1 = _file.getUploader();
                     var gist = _this._isSuccessCode(status);
                     var method = function (g, f, r, s, h) { if (g) {
@@ -1260,7 +1220,7 @@ var FileUploader = (function (_super) {
             });
             _this._getProtocol()._error.subscribe(function (obj) {
                 var _file = obj._file, response = obj.response, status = obj.status, headers = obj.headers;
-                if (_file instanceof __WEBPACK_IMPORTED_MODULE_2__fileManager_core__["a" /* FileManager */]) {
+                if (_file instanceof fileManager_core_1.FileManager) {
                     var uploader = _file.getUploader();
                     uploader._onErrorFile(_file, response, status, headers);
                     uploader._onCompleteFile(_file, response, status, headers);
@@ -1268,7 +1228,7 @@ var FileUploader = (function (_super) {
             });
             _this._getProtocol()._abort.subscribe(function (obj) {
                 var _file = obj._file, response = obj.response, status = obj.status, headers = obj.headers;
-                if (_file instanceof __WEBPACK_IMPORTED_MODULE_2__fileManager_core__["a" /* FileManager */]) {
+                if (_file instanceof fileManager_core_1.FileManager) {
                     var uploader = _file.getUploader();
                     uploader._onErrorFile(_file, response, status, headers);
                     uploader._onCompleteFile(_file, response, status, headers);
@@ -1278,62 +1238,47 @@ var FileUploader = (function (_super) {
         return _this;
     }
     return FileUploader;
-}(__WEBPACK_IMPORTED_MODULE_1__transfer_core__["a" /* Transfer */]));
-
+}(transfer_core_1.Transfer));
+exports.FileUploader = FileUploader;
 
 
 /***/ }),
 
 /***/ "./module/source/index.ts":
-/* exports provided: FileObject, FileManager, FileUploader, Protocol, ProtocolXHR, Transfer, hookType, UploaderHook, filterType, FileFilter, Utils */
-/* exports used: hookType, UploaderHook, FileManager, FileFilter, FileUploader, Protocol, ProtocolXHR, Transfer, Utils */
+/* unknown exports provided */
+/* all exports used */
 /*!********************************!*\
   !*** ./module/source/index.ts ***!
   \********************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__fileManager_core__ = __webpack_require__(/*! ./fileManager.core */ "./module/source/fileManager.core.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__fileManager_core__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fileUploader_core__ = __webpack_require__(/*! ./fileUploader.core */ "./module/source/fileUploader.core.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_1__fileUploader_core__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__protocol_core__ = __webpack_require__(/*! ./protocol.core */ "./module/source/protocol.core.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_2__protocol_core__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_2__protocol_core__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__transfer_core__ = __webpack_require__(/*! ./transfer.core */ "./module/source/transfer.core.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_3__transfer_core__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__uploaderHook_core__ = __webpack_require__(/*! ./uploaderHook.core */ "./module/source/uploaderHook.core.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_4__uploaderHook_core__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_4__uploaderHook_core__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__fileFilter_core__ = __webpack_require__(/*! ./fileFilter.core */ "./module/source/fileFilter.core.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_5__fileFilter_core__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_core__ = __webpack_require__(/*! ./utils.core */ "./module/source/utils.core.ts");
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_6__utils_core__["a"]; });
 
-
-
-
-
-
-
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(/*! ./fileManager.core */ "./module/source/fileManager.core.ts"));
+__export(__webpack_require__(/*! ./fileUploader.core */ "./module/source/fileUploader.core.ts"));
+__export(__webpack_require__(/*! ./protocol.core */ "./module/source/protocol.core.ts"));
+__export(__webpack_require__(/*! ./transfer.core */ "./module/source/transfer.core.ts"));
+__export(__webpack_require__(/*! ./uploaderHook.core */ "./module/source/uploaderHook.core.ts"));
+__export(__webpack_require__(/*! ./fileFilter.core */ "./module/source/fileFilter.core.ts"));
+__export(__webpack_require__(/*! ./utils.core */ "./module/source/utils.core.ts"));
 
 
 /***/ }),
 
 /***/ "./module/source/protocol.core.ts":
-/* exports provided: Protocol, ProtocolXHR */
-/* exports used: Protocol, ProtocolXHR */
+/* unknown exports provided */
+/* all exports used */
 /*!****************************************!*\
   !*** ./module/source/protocol.core.ts ***!
   \****************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/index.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_core__ = __webpack_require__(/*! ./utils.core */ "./module/source/utils.core.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pipe_fileSizePipe_pipe__ = __webpack_require__(/*! ../pipe/fileSizePipe.pipe */ "./module/pipe/fileSizePipe.pipe.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Protocol; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ProtocolXHR; });
+
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1344,9 +1289,10 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/index.js");
+var utils_core_1 = __webpack_require__(/*! ./utils.core */ "./module/source/utils.core.ts");
+var fileSizePipe_pipe_1 = __webpack_require__(/*! ../pipe/fileSizePipe.pipe */ "./module/pipe/fileSizePipe.pipe.ts");
 // tslint:disable:max-line-length
 var FormData = window.FormData;
 /**
@@ -1364,11 +1310,11 @@ var Protocol = (function () {
      * @memberOf Protocol
      */
     function Protocol() {
-        this._id = __WEBPACK_IMPORTED_MODULE_1__utils_core__["a" /* Utils */].uniqueID();
-        this._progress = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */]();
-        this._load = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */]();
-        this._error = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */]();
-        this._abort = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* EventEmitter */]();
+        this._id = utils_core_1.Utils.uniqueID();
+        this._progress = new core_1.EventEmitter();
+        this._load = new core_1.EventEmitter();
+        this._error = new core_1.EventEmitter();
+        this._abort = new core_1.EventEmitter();
         this._connections = [];
     }
     Object.defineProperty(Protocol.prototype, "connection", {
@@ -1469,7 +1415,7 @@ var Protocol = (function () {
     };
     return Protocol;
 }());
-
+exports.Protocol = Protocol;
 /**
  * Standard protocol for server communication (file uploading)
  *
@@ -1494,17 +1440,17 @@ var ProtocolXHR = (function (_super) {
         var _xhr;
         var sendable;
         var uploader = _file.getUploader();
-        var _formData = __WEBPACK_IMPORTED_MODULE_1__utils_core__["a" /* Utils */].extendValue(uploader.options.formData, _file.options.formData);
-        var _withCredentials = __WEBPACK_IMPORTED_MODULE_1__utils_core__["a" /* Utils */].extendValue(uploader.options.withCredentials, _file.options.withCredentials);
-        var _method = __WEBPACK_IMPORTED_MODULE_1__utils_core__["a" /* Utils */].extendValue(uploader.options.method, _file.options.method);
-        var _url = __WEBPACK_IMPORTED_MODULE_1__utils_core__["a" /* Utils */].extendValue(uploader.options.url, _file.options.url);
-        var _alias = __WEBPACK_IMPORTED_MODULE_1__utils_core__["a" /* Utils */].extendValue(uploader.options.alias, _file.options.alias);
-        var _headers = __WEBPACK_IMPORTED_MODULE_1__utils_core__["a" /* Utils */].extendValue(uploader.options.headers, _file.options.headers);
+        var _formData = utils_core_1.Utils.extendValue(uploader.options.formData, _file.options.formData);
+        var _withCredentials = utils_core_1.Utils.extendValue(uploader.options.withCredentials, _file.options.withCredentials);
+        var _method = utils_core_1.Utils.extendValue(uploader.options.method, _file.options.method);
+        var _url = utils_core_1.Utils.extendValue(uploader.options.url, _file.options.url);
+        var _alias = utils_core_1.Utils.extendValue(uploader.options.alias, _file.options.alias);
+        var _headers = utils_core_1.Utils.extendValue(uploader.options.headers, _file.options.headers);
         var time = new Date().getTime();
         var load = 0;
         var speed = 0;
         var sppedToText = null;
-        var $filesize = new __WEBPACK_IMPORTED_MODULE_2__pipe_fileSizePipe_pipe__["a" /* FileSizePipe */]();
+        var $filesize = new fileSizePipe_pipe_1.FileSizePipe();
         _xhr = new XMLHttpRequest();
         this.connection = {
             _file: _file,
@@ -1584,30 +1530,26 @@ var ProtocolXHR = (function (_super) {
     };
     return ProtocolXHR;
 }(Protocol));
-
+exports.ProtocolXHR = ProtocolXHR;
 
 
 /***/ }),
 
 /***/ "./module/source/transfer.core.ts":
-/* exports provided: Transfer */
-/* exports used: Transfer */
+/* unknown exports provided */
+/* all exports used */
 /*!****************************************!*\
   !*** ./module/source/transfer.core.ts ***!
   \****************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__ = __webpack_require__(/*! rxjs/Rx */ "./node_modules/rxjs/Rx.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_core__ = __webpack_require__(/*! ./utils.core */ "./module/source/utils.core.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fileManager_core__ = __webpack_require__(/*! ./fileManager.core */ "./module/source/fileManager.core.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__ = __webpack_require__(/*! ./uploaderHook.core */ "./module/source/uploaderHook.core.ts");
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Transfer; });
 
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });
+var Rx_1 = __webpack_require__(/*! rxjs/Rx */ "./node_modules/rxjs/Rx.js");
+var utils_core_1 = __webpack_require__(/*! ./utils.core */ "./module/source/utils.core.ts");
+var fileManager_core_1 = __webpack_require__(/*! ./fileManager.core */ "./module/source/fileManager.core.ts");
+var uploaderHook_core_1 = __webpack_require__(/*! ./uploaderHook.core */ "./module/source/uploaderHook.core.ts");
 // tslint:disable:no-unused-expression
 var TransferOptionsDefault = {
     url: '',
@@ -1640,11 +1582,11 @@ var Transfer = (function () {
      */
     function Transfer(type, _options) {
         this.type = type;
-        this._queue$ = new __WEBPACK_IMPORTED_MODULE_0_rxjs_Rx__["BehaviorSubject"]([]);
+        this._queue$ = new Rx_1.BehaviorSubject([]);
         var div = document.createElement('div');
         this._isHTML5 = !!(File && FormData && FileReader);
         this._isDragAndDrop = (('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)) ? true : false;
-        this._id = __WEBPACK_IMPORTED_MODULE_1__utils_core__["a" /* Utils */].uniqueID();
+        this._id = utils_core_1.Utils.uniqueID();
         this._hooks = [];
         if (!this._isHTML5) {
             throw new Error("Your browser doesn't support HTML5. Our FileUploader can't work here.");
@@ -1660,7 +1602,7 @@ var Transfer = (function () {
     });
     Object.defineProperty(Transfer.prototype, "queue$", {
         get: function () {
-            return __WEBPACK_IMPORTED_MODULE_1__utils_core__["a" /* Utils */].asObservable(this._queue$);
+            return utils_core_1.Utils.asObservable(this._queue$);
         },
         enumerable: true,
         configurable: true
@@ -1760,12 +1702,12 @@ var Transfer = (function () {
         var _retFiles = [];
         var _dummyFile;
         var _check = false;
-        if (__WEBPACK_IMPORTED_MODULE_1__utils_core__["a" /* Utils */].isElement(_files)) {
+        if (utils_core_1.Utils.isElement(_files)) {
             // If _files was not converted
             for (var _i = 0, _a = _files.files; _i < _a.length; _i++) {
                 var _fileElement = _a[_i];
                 try {
-                    _dummyFile = new __WEBPACK_IMPORTED_MODULE_2__fileManager_core__["a" /* FileManager */](_fileElement, options, this);
+                    _dummyFile = new fileManager_core_1.FileManager(_fileElement, options, this);
                 }
                 catch (e) {
                     throw Error("Couldn't create a new FileManager object.");
@@ -1776,7 +1718,7 @@ var Transfer = (function () {
         }
         else if (_files instanceof Object) {
             // If _files is an array of FileManger
-            if ((typeof _files[0] !== 'undefined') && (_files[0] instanceof __WEBPACK_IMPORTED_MODULE_2__fileManager_core__["a" /* FileManager */])) {
+            if ((typeof _files[0] !== 'undefined') && (_files[0] instanceof fileManager_core_1.FileManager)) {
                 for (var _b = 0, _files_1 = _files; _b < _files_1.length; _b++) {
                     var _file = _files_1[_b];
                     _check = this.addFile(_file);
@@ -1784,7 +1726,7 @@ var Transfer = (function () {
                 }
                 // If _files is only a FileManger
             }
-            else if (_files instanceof __WEBPACK_IMPORTED_MODULE_2__fileManager_core__["a" /* FileManager */]) {
+            else if (_files instanceof fileManager_core_1.FileManager) {
                 _check = this.addFile(_files);
                 (_check) && _retFiles.push(_files);
             }
@@ -1810,21 +1752,21 @@ var Transfer = (function () {
         var queue = this._queue$.getValue();
         if (this.options.uniqueFiles) {
             if (this.notInQueue(_file) === -1) {
-                this._runHook(__WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].beforeAddingFile, _file);
+                this._runHook(uploaderHook_core_1.hookType.beforeAddingFile, _file);
                 queue.push(_file);
                 this._queue$.next(queue);
                 this._onAddFile(_file);
-                this._runHook(__WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].afterAddingFile, _file);
+                this._runHook(uploaderHook_core_1.hookType.afterAddingFile, _file);
                 (this.options.autoUpload) && _file.upload();
                 return true;
             }
         }
         else {
-            this._runHook(__WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].beforeAddingFile, _file);
+            this._runHook(uploaderHook_core_1.hookType.beforeAddingFile, _file);
             queue.push(_file);
             this._queue$.next(queue);
             this._onAddFile(_file);
-            this._runHook(__WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].afterAddingFile, _file);
+            this._runHook(uploaderHook_core_1.hookType.afterAddingFile, _file);
             (this.options.autoUpload) && _file.upload();
             return true;
         }
@@ -1957,20 +1899,20 @@ var Transfer = (function () {
         this.onAddFile(_file);
     };
     Transfer.prototype._onAddFileError = function (_file) {
-        this._runHook(__WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].errorAddingFile, _file);
+        this._runHook(uploaderHook_core_1.hookType.errorAddingFile, _file);
         this.onAddFileError(_file);
     };
     Transfer.prototype._onBeforeUploadAll = function () {
-        this._runHook(__WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].prepareUploadAll, this);
+        this._runHook(uploaderHook_core_1.hookType.prepareUploadAll, this);
         this.onBeforeUploadAll(this);
     };
     Transfer.prototype._onBeforeUpload = function (_file) {
-        this._runHook(__WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].prepareUploadFile, _file);
+        this._runHook(uploaderHook_core_1.hookType.prepareUploadFile, _file);
         _file._onBeforeUpload();
         this.onBeforeUpload(_file);
     };
     Transfer.prototype._onProgressFileSpeed = function (_file, _speed) {
-        this._runHook(__WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].prepareUploadFile, _file, _speed);
+        this._runHook(uploaderHook_core_1.hookType.prepareUploadFile, _file, _speed);
         _file._onProgressFileSpeed(_speed);
         this.onProgressFileSpeed(_file, _speed);
     };
@@ -1993,7 +1935,7 @@ var Transfer = (function () {
                 }
             }
             percent = Math.floor(percent / queue.length);
-            this._runHook(__WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].progressUploadAll, percent);
+            this._runHook(uploaderHook_core_1.hookType.progressUploadAll, percent);
             this.onProgress(this, percent);
             (percent >= 100) && this._onCompleteAll();
             return;
@@ -2002,21 +1944,21 @@ var Transfer = (function () {
         this._onCompleteAll();
     };
     Transfer.prototype._onSuccessFile = function (_file, response, status, headers) {
-        this._runHook(__WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].successUploadFile, _file, response, status, headers);
+        this._runHook(uploaderHook_core_1.hookType.successUploadFile, _file, response, status, headers);
         _file._onSuccess(response, status, headers);
         this.onSuccess(_file, response, status, headers);
     };
     Transfer.prototype._onErrorFile = function (_file, response, status, headers) {
-        this._runHook(__WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].failedUploadFile, _file, response, status, headers);
+        this._runHook(uploaderHook_core_1.hookType.failedUploadFile, _file, response, status, headers);
         this.onError(_file, response, status, headers);
     };
     Transfer.prototype._onCompleteFile = function (_file, response, status, headers) {
-        this._runHook(__WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].completeUploadFile, _file, response, status, headers);
+        this._runHook(uploaderHook_core_1.hookType.completeUploadFile, _file, response, status, headers);
         this._onProgress();
         this.onComplete(_file, response, status, headers);
     };
     Transfer.prototype._onCompleteAll = function () {
-        this._runHook(__WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].completeUploadAll, this);
+        this._runHook(uploaderHook_core_1.hookType.completeUploadAll, this);
         this.onCompleteAll(this);
     };
     Transfer.prototype._headersGetter = function (parsedHeaders) {
@@ -2058,26 +2000,26 @@ var Transfer = (function () {
                 var obj = this._hooks[key];
                 if (obj.type === type) {
                     switch (type) {
-                        case __WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].beforeAddingFile:
-                        case __WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].prepareUploadAll:
-                        case __WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].prepareUploadFile:
-                        case __WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].afterAddingFile:
-                        case __WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].errorAddingFile:
-                        case __WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].completeUploadAll:
-                        case __WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].progressUploadAll:
+                        case uploaderHook_core_1.hookType.beforeAddingFile:
+                        case uploaderHook_core_1.hookType.prepareUploadAll:
+                        case uploaderHook_core_1.hookType.prepareUploadFile:
+                        case uploaderHook_core_1.hookType.afterAddingFile:
+                        case uploaderHook_core_1.hookType.errorAddingFile:
+                        case uploaderHook_core_1.hookType.completeUploadAll:
+                        case uploaderHook_core_1.hookType.progressUploadAll:
                             {
                                 obj.callback(args[0]);
                             }
                             break;
-                        case __WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].progressUploadFile:
+                        case uploaderHook_core_1.hookType.progressUploadFile:
                             {
                                 obj.callback(args[0], args[1]);
                             }
                             break;
-                        case __WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].cancelUploadFile:
-                        case __WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].successUploadFile:
-                        case __WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].failedUploadFile:
-                        case __WEBPACK_IMPORTED_MODULE_3__uploaderHook_core__["a" /* hookType */].completeUploadFile:
+                        case uploaderHook_core_1.hookType.cancelUploadFile:
+                        case uploaderHook_core_1.hookType.successUploadFile:
+                        case uploaderHook_core_1.hookType.failedUploadFile:
+                        case uploaderHook_core_1.hookType.completeUploadFile:
                             {
                                 obj.callback(args[0], args[1], args[2], args[3]);
                             }
@@ -2124,22 +2066,22 @@ var Transfer = (function () {
     };
     return Transfer;
 }());
-
+exports.Transfer = Transfer;
 
 
 /***/ }),
 
 /***/ "./module/source/uploaderHook.core.ts":
-/* exports provided: hookType, UploaderHook */
-/* exports used: hookType, UploaderHook */
+/* unknown exports provided */
+/* all exports used */
 /*!********************************************!*\
   !*** ./module/source/uploaderHook.core.ts ***!
   \********************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return hookType; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return UploaderHook; });
+
+Object.defineProperty(exports, "__esModule", { value: true });
 var hookType;
 (function (hookType) {
     hookType[hookType["beforeAddingFile"] = 0] = "beforeAddingFile";
@@ -2154,7 +2096,7 @@ var hookType;
     hookType[hookType["prepareUploadAll"] = 9] = "prepareUploadAll";
     hookType[hookType["progressUploadAll"] = 10] = "progressUploadAll";
     hookType[hookType["completeUploadAll"] = 11] = "completeUploadAll";
-})(hookType || (hookType = {}));
+})(hookType = exports.hookType || (exports.hookType = {}));
 var UploaderHook = (function () {
     function UploaderHook(_hookType, _callback, _priority) {
         if (_priority === void 0) { _priority = 0; }
@@ -2188,24 +2130,23 @@ var UploaderHook = (function () {
     });
     return UploaderHook;
 }());
-
+exports.UploaderHook = UploaderHook;
 
 
 /***/ }),
 
 /***/ "./module/source/utils.core.ts":
-/* exports provided: Utils */
-/* exports used: Utils */
+/* unknown exports provided */
+/* all exports used */
 /*!*************************************!*\
   !*** ./module/source/utils.core.ts ***!
   \*************************************/
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__ = __webpack_require__(/*! rxjs/Observable */ "./node_modules/rxjs/Observable.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Utils; });
 
+Object.defineProperty(exports, "__esModule", { value: true });
+var Observable_1 = __webpack_require__(/*! rxjs/Observable */ "./node_modules/rxjs/Observable.js");
 var Utils = (function () {
     function Utils() {
     }
@@ -2264,17 +2205,17 @@ var Utils = (function () {
         return _value;
     };
     Utils.asObservable = function (subject) {
-        return new __WEBPACK_IMPORTED_MODULE_0_rxjs_Observable__["Observable"](function (fn) { return subject.subscribe(fn); });
+        return new Observable_1.Observable(function (fn) { return subject.subscribe(fn); });
     };
     return Utils;
 }());
-
 Utils._uniqueNumber = 1;
 Utils.nextUID = function () { return (Utils._uniqueNumber++).toString(); };
+exports.Utils = Utils;
 
 
 /***/ })
 
 },["./index.ts"]);
 });
-//# sourceMappingURL=ng2-file-uploader.umd.js.map
+//# sourceMappingURL=ng2-file-uploader.webpack.umd.js.map
