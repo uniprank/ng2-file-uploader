@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es5",
     "module": "es6",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
@@ -15,6 +15,7 @@
     "stripInternal": true,
     "noUnusedParameters": true,
     "lib": ["dom", "es6"],
+    "outDir": "./lib",
     "rootDir": ".",
     "types": [
       "node"
@@ -24,12 +25,14 @@
     "module/**/*.ts"
   ],
   "files": [
+    "vendor.ts",
     "index.ts",
     "ng2-file-uploader.ts"
   ],
   "exclude": [
     "node_modules",
     "bundles",
+    "lib",
     "dist"
   ],
   "angularCompilerOptions": {

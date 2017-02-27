@@ -1,3 +1,8 @@
 /node_modules
 /typings
+/lib
 typings.json
+/bundles/vendor.js
+/bundles/vendor.js.map
+/bundles/ng2-file-uploader.min.js
+/bundles/ng2-file-uploader.min.js.map
