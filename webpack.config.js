@@ -4,8 +4,8 @@ var path = require('path');
 module.exports = {
     entry: {
         'vendor': './vendor.ts',
-        'ng2-file-uploader.umd': './index.ts',
-        'ng2-file-uploader.min': './index.ts'
+        'ng2-file-uploader.webpack.umd': './index.ts',
+        'ng2-file-uploader.webpack.min': './index.ts'
     },
 
     output: {
