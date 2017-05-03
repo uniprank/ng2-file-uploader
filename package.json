@@ -76,7 +76,7 @@
     "@angular/core": "^4.1.0"
   },
   "scripts": {
-    "build": "./node_modules/.bin/ngc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json",
     "buildExtern": "tsc -p tsconfig.json",
     "changelog": "gulp changelog",
     "clean": "./scripts/clean.sh",
