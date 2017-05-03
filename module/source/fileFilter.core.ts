@@ -60,8 +60,9 @@ export class FileFilter {
 
                     case 'date': {
                         // Format for validation is `2017-01-01 10:10:10`
-                        let _checkDate: string = new DatePipe('en-US').transform(_file.object.lastModifiedDate, 'yyyy-MM-dd hh:mm:ss');
-                        if (_checkDate.match(<RegExp>this._regex)) {
+                        // tslint:disable-next-line:max-line-length
+                        let _checkDate: string | null = new DatePipe('en-US').transform(_file.object.lastModifiedDate, 'yyyy-MM-dd hh:mm:ss');
+                        if (_checkDate && _checkDate.match(<RegExp>this._regex)) {
                             _valid = true;
                         }
                     }break;

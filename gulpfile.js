@@ -93,7 +93,7 @@ gulp.task('build-sjs', function () {
     var builder = systemjsBuilder()
     builder.loadConfigSync('./system.config.js')
  
-    builder.buildStatic('./lib/index.js - rxjs/Rx - @angular/common - @angular/core', 'ng2-file-uploader.systemjs.umd.js', {
+    builder.buildStatic('./lib/index.js - rxjs/Rx - rxjs/Observable - @angular/common - @angular/core', 'ng2-file-uploader.systemjs.umd.js', {
         minify: false,
         mangle: false,
         sourceMaps: true
