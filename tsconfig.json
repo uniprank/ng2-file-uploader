@@ -14,7 +14,7 @@
     "skipLibCheck": true,
     "stripInternal": true,
     "noUnusedParameters": true,
-    "lib": ["dom", "es6"],
+    "lib": ["es6", "dom"],
     "outDir": "lib",
     "rootDir": ".",
     "types": [

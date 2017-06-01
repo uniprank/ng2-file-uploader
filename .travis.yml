@@ -1,21 +1,37 @@
+sudo: false
 language: node_js
-sudo: true
-dist: trusty
-
-node_js:
-  - '5.6.0'
+node_js: '7'
 
 branches:
   only:
   - master
 
 before_install:
- - export CHROME_BIN=/usr/bin/google-chrome
- - export DISPLAY=:99.0
- - sh -e /etc/init.d/xvfb start
- - sudo apt-get update
- - sudo apt-get install -y libappindicator1 fonts-liberation
- - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
- - sudo dpkg -i google-chrome*.deb
- - npm i -g typescript typings
- - typings install
+  - export CHROME_BIN=chromium-browser
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+
+script:
+  - npm run lint
+  - npm run build
+  - rm -rf node_modules/@uniprank/ng2-file-uploader
+  - npm i ./dist
+  - npm run test-coverage
+
+after_success:
+  - "./node_modules/.bin/codecov"
+  - npm run test-cross
+
+addons:
+  # sauce labs tunel connector (read more https://docs.travis-ci.com/user/sauce-connect/ )
+  sauce_connect:
+    username: "delomiliar"
+  jwt:
+    secure: "YHHc0KmlkbTQx86sFdR9aRfs0jYg/nbUTc98MXY23HrcDW0tMowAxMqq0jjnbupDv3fv8kVa5Ea7lgkmgTa2r8zZB/uOuoFrDE5DXtC5cGVfC0w7elcwzfphCE/IV/0cjGRTTdxxH5SOzYo6VsRiP8j3fIkttQtkTjj8Fc+v60BssC2EMF5L3ZrB2ujiF3G6RW5Oi9lY/OaDwrBgbe0wyiL1jLztP2TyuxpPJTpwdYtBbkvA4G6cl98UfTULQaLC91dQNo1M7CUCqDA5n6R7O5sIx4VuPzZ2ZfApup/e2ZPxe6u751UBxVZp7JCTJeWfEwl2AbEMkbPjNUoWjbEhpcpqjr3yFzS8eaz2uCZ0Y/JSiH2pOn9nzsVYsIbK1bKCRzKRZCcFAJhMdZiZUlnms6FItri9BhsFkW93QRzLE/8n4b9AJM31i2zf3vHnUA7SeVCai1bYzl+iX6B/QcaRImNdx3/m8wtQdl+f+K5lzY9iGmBQAZMEaeCsc8xsP4jbpR6x8F3Y7H21TPQkvwlnH7wY7Ec39ya4mw4Xhp+UhgpZljMPe1FQF1m3GOQ/wAL1+3sTF/gi/9mYIwDB/GNcPh1TW2Jsi22CCkwBuEbvjn5a0y1Beuv8+mbSCfh/ofE95o9kbCECjcMhomf88vKEb7MgN6RzFXwdqGzkHnbDyKg="
+  firefox: "latest"
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    # required by node-gyp to build some packages
+    packages:
+    - g++-4.8
