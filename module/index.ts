@@ -1,8 +1,3 @@
-import { FileDropDirective } from './directives/fileDrop.directive';
-import { FileSelectDirective } from './directives/fileSelect.directive';
-import { ImagePreviewDirective } from './directives/imgPreview.directive';
-import { ProgressBarDirective } from './directives/progressBar.directive';
-
 export * from './directives/fileDrop.directive';
 export * from './directives/fileSelect.directive';
 export * from './directives/imgPreview.directive';
@@ -23,15 +18,3 @@ export {
 } from './interface'
 
 export { FileUploaderModule } from './module';
-
-export const UPLOAD_DIRECTIVES: any[] = [
-  FileSelectDirective,
-  FileDropDirective
-];
-
-export const UPLOAD_ALL: any[] = [
-  FileSelectDirective,
-  FileDropDirective,
-  ImagePreviewDirective,
-  ProgressBarDirective
-];

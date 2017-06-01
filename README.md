@@ -2,6 +2,12 @@
 
 ---
 
+## DEPRECATED Version
+There is a newer version ngx-file-uploader. 
+
+GIT: [uniprank / ngx-file-uploader](https://github.com/uniprank/ngx-file-uploader)
+NPM: [@uniprank/ngx-file-uploader](https://www.npmjs.com/package/@uniprank/ngx-file-uploader)
+
 ## About
 
 **Angular 2 File Upload** is a module for the [@Angular-2](https://angular.io/) framework. Supports drag-n-drop upload, upload progress, validation filters and a file upload queue. It supports native HTML5 uploads. Works with any server side platform which supports standard HTML form uploads.
@@ -13,7 +19,7 @@ When files are selected or dropped into the component/directive, one or more fil
 ```
 npm install @uniprank/ng2-file-uploader --save
 ```
-You could find this module in npm like [_angular2 file uploader_](https://www.npmjs.com/search?q=uniprank%20ng2-file-uploader).
+You could find this module in npm like [_angular2 file uploader_](https://www.npmjs.com/search?q=uniprank).
 
 ### Module Dependency
 
